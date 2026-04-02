@@ -1,0 +1,156 @@
+# ========================================
+# Night Patrol Robot - Example Configurations
+# ========================================
+# This file contains example configurations for various scenarios
+
+# ========================================
+# Configuration 1: Indoor Office Patrol
+# ========================================
+# Small, cautious patrol suitable for office environments
+# Characteristics: Slow speed, tight corners, sensitive obstacle detection
+
+indoor_office_patrol:
+  ros__parameters:
+    # Small rectangular office loop (3m x 4m)
+    waypoints: [0.0, 0.0, 3.0, 0.0, 3.0, 4.0, 0.0, 4.0]
+    
+    linear_speed: 0.2        # Slower for safety
+    angular_speed: 0.4
+    
+    waypoint_tolerance: 0.2  # Tighter tolerance
+    obstacle_threshold: 1.0  # More conservative detection
+    
+    noise_enabled: false     # No noise in controlled environment
+    noise_magnitude: 0.0
+    
+    scan_timeout: 2.0
+
+# ========================================
+# Configuration 2: Warehouse Patrol
+# ========================================
+# Larger patrol area with faster speeds for warehouse monitoring
+
+warehouse_patrol:
+  ros__parameters:
+    # Large warehouse perimeter (20m x 15m)
+    waypoints: [0.0, 0.0, 20.0, 0.0, 20.0, 15.0, 0.0, 15.0]
+    
+    linear_speed: 0.5        # Faster in open space
+    angular_speed: 0.7
+    
+    waypoint_tolerance: 0.5  # Larger tolerance acceptable
+    obstacle_threshold: 0.6  # Can be closer to obstacles
+    
+    noise_enabled: false
+    noise_magnitude: 0.0
+    
+    scan_timeout: 2.0
+
+# ========================================
+# Configuration 3: Outdoor Perimeter Patrol
+# ========================================
+# Outdoor patrol with realistic movement and larger area
+
+outdoor_patrol:
+  ros__parameters:
+    # Large outdoor perimeter with checkpoints
+    waypoints: [0.0, 0.0, 10.0, 0.0, 15.0, 5.0, 15.0, 15.0, 5.0, 20.0, 0.0, 15.0]
+    
+    linear_speed: 0.4
+    angular_speed: 0.6
+    
+    waypoint_tolerance: 0.4
+    obstacle_threshold: 0.8
+    
+    noise_enabled: true      # Realistic outdoor movement
+    noise_magnitude: 0.08    # Slight wandering
+    
+    scan_timeout: 3.0        # Longer timeout for outdoor sensors
+
+# ========================================
+# Configuration 4: Testing/Debug Mode
+# ========================================
+# Small test area for development and debugging
+
+test_mode:
+  ros__parameters:
+    # Tiny square for quick testing (2m x 2m)
+    waypoints: [0.0, 0.0, 2.0, 0.0, 2.0, 2.0, 0.0, 2.0]
+    
+    linear_speed: 0.15       # Very slow for observation
+    angular_speed: 0.3
+    
+    waypoint_tolerance: 0.15
+    obstacle_threshold: 0.5
+    
+    noise_enabled: true      # Test noise feature
+    noise_magnitude: 0.03
+    
+    scan_timeout: 1.0
+
+# ========================================
+# Configuration 5: High-Speed Patrol
+# ========================================
+# Fast patrol for urgent situations or large open areas
+
+high_speed_patrol:
+  ros__parameters:
+    # Medium-sized patrol area
+    waypoints: [0.0, 0.0, 8.0, 0.0, 8.0, 8.0, 0.0, 8.0]
+    
+    linear_speed: 0.8        # Maximum safe speed
+    angular_speed: 1.0
+    
+    waypoint_tolerance: 0.6  # Loose tolerance for speed
+    obstacle_threshold: 1.2  # Early detection at high speed
+    
+    noise_enabled: false
+    noise_magnitude: 0.0
+    
+    scan_timeout: 1.5
+
+# ========================================
+# Configuration 6: Zigzag Patrol Pattern
+# ========================================
+# Complex patrol pattern covering more area
+
+zigzag_patrol:
+  ros__parameters:
+    # Zigzag pattern through area
+    waypoints: [
+      0.0, 0.0,
+      10.0, 0.0,
+      0.0, 3.0,
+      10.0, 6.0,
+      0.0, 9.0,
+      10.0, 12.0,
+      0.0, 12.0
+    ]
+    
+    linear_speed: 0.35
+    angular_speed: 0.55
+    
+    waypoint_tolerance: 0.3
+    obstacle_threshold: 0.7
+    
+    noise_enabled: false
+    noise_magnitude: 0.0
+    
+    scan_timeout: 2.0
+
+# ========================================
+# Usage Instructions
+# ========================================
+#
+# To use any of these configurations, copy the desired section
+# to patrol_params.yaml, or create a new file and launch with:
+#
+# ros2 launch patrol_control patrol.launch.py config_file:=/path/to/config.yaml
+#
+# Or specify the node name directly:
+#
+# ros2 run patrol_control patrol_controller --ros-args \
+#   --params-file /path/to/config.yaml \
+#   -r __node:=indoor_office_patrol
+#
+# ========================================

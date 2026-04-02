@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/learning_tf2_cpp/fixed_frame_tf2_broadcaster" "TARGETS" "fixed_frame_tf2_broadcaster" "DESTINATION" "lib/learning_tf2_cpp")

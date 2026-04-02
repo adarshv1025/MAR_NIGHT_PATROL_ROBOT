@@ -1,0 +1,197 @@
+[0.000000] (-) TimerEvent: {}
+[0.000033] (learning_tf2_cpp) JobQueued: {'identifier': 'learning_tf2_cpp', 'dependencies': OrderedDict()}
+[0.000052] (patrol_control) JobQueued: {'identifier': 'patrol_control', 'dependencies': OrderedDict()}
+[0.000238] (learning_tf2_cpp) JobStarted: {'identifier': 'learning_tf2_cpp'}
+[0.005020] (patrol_control) JobStarted: {'identifier': 'patrol_control'}
+[0.007895] (learning_tf2_cpp) JobProgress: {'identifier': 'learning_tf2_cpp', 'progress': 'cmake'}
+[0.008919] (learning_tf2_cpp) Command: {'cmd': ['/usr/bin/cmake', '/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/src/learning_tf2_cpp', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp'], 'cwd': '/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/learning_tf2_cpp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pes2ug23cs024'), ('AGENT', '1'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/pes2ug23cs024'), ('OLDPWD', '/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1510'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=598513865bd0a546aebf657669ce8836'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'pes2ug23cs024'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'pes2ug23cs024'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('OPENCODE', '1'), ('PATH', '/home/pes2ug23cs024/.opencode/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/pes2ug23cs024:@/tmp/.ICE-unix/1510,unix/pes2ug23cs024:/tmp/.ICE-unix/1510'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c1b4d5db_605d_4df5_a3b2_856cb6b9c11a'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('OPENCODE_PID', '26059'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.RMB7M3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.100'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/learning_tf2_cpp'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=598513865bd0a546aebf657669ce8836'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099908] (-) TimerEvent: {}
+[0.126080] (learning_tf2_cpp) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.166796] (learning_tf2_cpp) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.173368] (learning_tf2_cpp) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.200010] (-) TimerEvent: {}
+[0.211402] (learning_tf2_cpp) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.217181] (learning_tf2_cpp) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.217934] (learning_tf2_cpp) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.218809] (learning_tf2_cpp) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.220339] (learning_tf2_cpp) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.254821] (learning_tf2_cpp) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.258135] (learning_tf2_cpp) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.258458] (learning_tf2_cpp) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.258540] (learning_tf2_cpp) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.262847] (learning_tf2_cpp) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.280496] (patrol_control) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/patrol_control/build', '--no-deps', 'symlink_data'], 'cwd': '/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/patrol_control', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'pes2ug23cs024', 'AGENT': '1', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/pes2ug23cs024', 'OLDPWD': '/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '1510', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=598513865bd0a546aebf657669ce8836', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'humble', 'LOGNAME': 'pes2ug23cs024', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'pes2ug23cs024', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'OPENCODE': '1', 'PATH': '/home/pes2ug23cs024/.opencode/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/pes2ug23cs024:@/tmp/.ICE-unix/1510,unix/pes2ug23cs024:/tmp/.ICE-unix/1510', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/c1b4d5db_605d_4df5_a3b2_856cb6b9c11a', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'OPENCODE_PID': '26059', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.RMB7M3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.100', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/patrol_control', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=598513865bd0a546aebf657669ce8836', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/patrol_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[0.300169] (-) TimerEvent: {}
+[0.329492] (learning_tf2_cpp) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.361934] (learning_tf2_cpp) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.384256] (patrol_control) StdoutLine: {'line': b'running develop\n'}
+[0.385839] (learning_tf2_cpp) StdoutLine: {'line': b'-- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[0.400266] (-) TimerEvent: {}
+[0.416573] (learning_tf2_cpp) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.419958] (learning_tf2_cpp) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.426028] (learning_tf2_cpp) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.434249] (learning_tf2_cpp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.444338] (patrol_control) StdoutLine: {'line': b'running egg_info\n'}
+[0.444390] (patrol_control) StdoutLine: {'line': b'creating patrol_control.egg-info\n'}
+[0.444464] (learning_tf2_cpp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.444658] (patrol_control) StdoutLine: {'line': b'writing patrol_control.egg-info/PKG-INFO\n'}
+[0.444687] (patrol_control) StdoutLine: {'line': b'writing dependency_links to patrol_control.egg-info/dependency_links.txt\n'}
+[0.444729] (patrol_control) StdoutLine: {'line': b'writing entry points to patrol_control.egg-info/entry_points.txt\n'}
+[0.444774] (patrol_control) StdoutLine: {'line': b'writing requirements to patrol_control.egg-info/requires.txt\n'}
+[0.444812] (patrol_control) StdoutLine: {'line': b'writing top-level names to patrol_control.egg-info/top_level.txt\n'}
+[0.444879] (patrol_control) StdoutLine: {'line': b"writing manifest file 'patrol_control.egg-info/SOURCES.txt'\n"}
+[0.445451] (patrol_control) StdoutLine: {'line': b"reading manifest file 'patrol_control.egg-info/SOURCES.txt'\n"}
+[0.445675] (patrol_control) StdoutLine: {'line': b"writing manifest file 'patrol_control.egg-info/SOURCES.txt'\n"}
+[0.446168] (patrol_control) StdoutLine: {'line': b'running build_ext\n'}
+[0.446240] (patrol_control) StdoutLine: {'line': b'Creating /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/lib/python3.10/site-packages/patrol-control.egg-link (link to .)\n'}
+[0.449585] (patrol_control) StdoutLine: {'line': b'Installing control_node script to /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/lib/patrol_control\n'}
+[0.449635] (patrol_control) StdoutLine: {'line': b'Installing emergency_node script to /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/lib/patrol_control\n'}
+[0.449826] (patrol_control) StdoutLine: {'line': b'Installing patrol_controller script to /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/lib/patrol_control\n'}
+[0.449859] (patrol_control) StdoutLine: {'line': b'Installing teleop_node script to /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/lib/patrol_control\n'}
+[0.450406] (patrol_control) StdoutLine: {'line': b'\n'}
+[0.450440] (patrol_control) StdoutLine: {'line': b'Installed /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/patrol_control\n'}
+[0.450460] (patrol_control) StdoutLine: {'line': b'running symlink_data\n'}
+[0.450479] (patrol_control) StdoutLine: {'line': b'creating /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/share/ament_index\n'}
+[0.450497] (patrol_control) StdoutLine: {'line': b'creating /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/share/ament_index/resource_index\n'}
+[0.450515] (patrol_control) StdoutLine: {'line': b'creating /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/share/ament_index/resource_index/packages\n'}
+[0.450532] (patrol_control) StdoutLine: {'line': b'symbolically linking /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/patrol_control/resource/patrol_control -> /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/share/ament_index/resource_index/packages\n'}
+[0.450552] (patrol_control) StdoutLine: {'line': b'symbolically linking /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/patrol_control/package.xml -> /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/share/patrol_control\n'}
+[0.450570] (patrol_control) StdoutLine: {'line': b'creating /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/share/patrol_control/launch\n'}
+[0.450636] (patrol_control) StdoutLine: {'line': b'symbolically linking /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/patrol_control/launch/patrol.launch.py -> /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/share/patrol_control/launch\n'}
+[0.450657] (patrol_control) StdoutLine: {'line': b'creating /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/share/patrol_control/config\n'}
+[0.450675] (patrol_control) StdoutLine: {'line': b'symbolically linking /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/patrol_control/config/patrol_params.yaml -> /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/share/patrol_control/config\n'}
+[0.450695] (patrol_control) StdoutLine: {'line': b'symbolically linking /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/patrol_control/config/example_configs.yaml -> /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/share/patrol_control/config\n'}
+[0.463664] (patrol_control) CommandEnded: {'returncode': 0}
+[0.467847] (patrol_control) JobEnded: {'identifier': 'patrol_control', 'rc': 0}
+[0.477099] (learning_tf2_cpp) StdoutLine: {'line': b'-- Found rclcpp: 16.0.18 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.502282] (-) TimerEvent: {}
+[0.503666] (learning_tf2_cpp) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.506035] (learning_tf2_cpp) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.553123] (learning_tf2_cpp) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.567468] (learning_tf2_cpp) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.588112] (learning_tf2_cpp) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.595496] (learning_tf2_cpp) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.602940] (-) TimerEvent: {}
+[0.628016] (learning_tf2_cpp) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.628183] (learning_tf2_cpp) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.663046] (learning_tf2_cpp) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.663504] (learning_tf2_cpp) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.688679] (learning_tf2_cpp) StdoutLine: {'line': b'-- Found tf2: 0.25.19 (/opt/ros/humble/share/tf2/cmake)\n'}
+[0.695692] (learning_tf2_cpp) StdoutLine: {'line': b'-- Found tf2_ros: 0.25.19 (/opt/ros/humble/share/tf2_ros/cmake)\n'}
+[0.703039] (-) TimerEvent: {}
+[0.756767] (learning_tf2_cpp) StdoutLine: {'line': b'-- Found turtlesim: 1.4.3 (/opt/ros/humble/share/turtlesim/cmake)\n'}
+[0.766923] (learning_tf2_cpp) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.803138] (-) TimerEvent: {}
+[0.808571] (learning_tf2_cpp) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[0.808685] (learning_tf2_cpp) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[0.808708] (learning_tf2_cpp) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[0.808931] (learning_tf2_cpp) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[0.809230] (learning_tf2_cpp) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[0.809473] (learning_tf2_cpp) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[0.809888] (learning_tf2_cpp) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[0.809920] (learning_tf2_cpp) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[0.810116] (learning_tf2_cpp) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[0.810831] (learning_tf2_cpp) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.822925] (learning_tf2_cpp) StdoutLine: {'line': b'-- Generating done\n'}
+[0.827367] (learning_tf2_cpp) StdoutLine: {'line': b'-- Build files have been written to: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/learning_tf2_cpp\n'}
+[0.831656] (learning_tf2_cpp) CommandEnded: {'returncode': 0}
+[0.831910] (learning_tf2_cpp) JobProgress: {'identifier': 'learning_tf2_cpp', 'progress': 'build'}
+[0.832513] (learning_tf2_cpp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/learning_tf2_cpp', '--', '-j5', '-l5'], 'cwd': '/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/learning_tf2_cpp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pes2ug23cs024'), ('AGENT', '1'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/pes2ug23cs024'), ('OLDPWD', '/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1510'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=598513865bd0a546aebf657669ce8836'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'pes2ug23cs024'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'pes2ug23cs024'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('OPENCODE', '1'), ('PATH', '/home/pes2ug23cs024/.opencode/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/pes2ug23cs024:@/tmp/.ICE-unix/1510,unix/pes2ug23cs024:/tmp/.ICE-unix/1510'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c1b4d5db_605d_4df5_a3b2_856cb6b9c11a'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('OPENCODE_PID', '26059'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.RMB7M3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.100'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/learning_tf2_cpp'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=598513865bd0a546aebf657669ce8836'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.856280] (learning_tf2_cpp) StdoutLine: {'line': b'[ 10%] Building CXX object CMakeFiles/fixed_frame_tf2_broadcaster.dir/src/fixed_frame_tf2_broadcaster.cpp.o\n'}
+[0.856389] (learning_tf2_cpp) StdoutLine: {'line': b'[ 20%] Building CXX object CMakeFiles/turtle_tf2_broadcaster.dir/src/turtle_tf2_broadcaster.cpp.o\n'}
+[0.856413] (learning_tf2_cpp) StdoutLine: {'line': b'[ 30%] Building CXX object CMakeFiles/static_turtle_tf2_broadcaster.dir/src/static_turtle_tf2_broadcaster.cpp.o\n'}
+[0.856872] (learning_tf2_cpp) StdoutLine: {'line': b'[ 40%] Building CXX object CMakeFiles/turtle_tf2_listener.dir/src/turtle_tf2_listener.cpp.o\n'}
+[0.858535] (learning_tf2_cpp) StdoutLine: {'line': b'[ 50%] Building CXX object CMakeFiles/dynamic_frame_tf2_broadcaster.dir/src/dynamic_frame_tf2_broadcaster.cpp.o\n'}
+[0.903745] (-) TimerEvent: {}
+[1.004808] (-) TimerEvent: {}
+[1.104955] (-) TimerEvent: {}
+[1.205127] (-) TimerEvent: {}
+[1.308359] (-) TimerEvent: {}
+[1.408561] (-) TimerEvent: {}
+[1.509382] (-) TimerEvent: {}
+[1.609806] (-) TimerEvent: {}
+[1.710008] (-) TimerEvent: {}
+[1.810240] (-) TimerEvent: {}
+[1.910526] (-) TimerEvent: {}
+[2.010849] (-) TimerEvent: {}
+[2.111083] (-) TimerEvent: {}
+[2.211280] (-) TimerEvent: {}
+[2.311456] (-) TimerEvent: {}
+[2.411656] (-) TimerEvent: {}
+[2.511831] (-) TimerEvent: {}
+[2.612104] (-) TimerEvent: {}
+[2.712300] (-) TimerEvent: {}
+[2.812526] (-) TimerEvent: {}
+[2.912708] (-) TimerEvent: {}
+[3.012876] (-) TimerEvent: {}
+[3.113114] (-) TimerEvent: {}
+[3.213351] (-) TimerEvent: {}
+[3.313543] (-) TimerEvent: {}
+[3.418013] (-) TimerEvent: {}
+[3.518228] (-) TimerEvent: {}
+[3.618902] (-) TimerEvent: {}
+[3.719272] (-) TimerEvent: {}
+[3.819449] (-) TimerEvent: {}
+[3.852399] (learning_tf2_cpp) StdoutLine: {'line': b'[ 60%] Linking CXX executable fixed_frame_tf2_broadcaster\n'}
+[3.919558] (-) TimerEvent: {}
+[4.019721] (-) TimerEvent: {}
+[4.113099] (learning_tf2_cpp) StdoutLine: {'line': b'[ 60%] Built target fixed_frame_tf2_broadcaster\n'}
+[4.119811] (-) TimerEvent: {}
+[4.179600] (learning_tf2_cpp) StdoutLine: {'line': b'[ 70%] Linking CXX executable static_turtle_tf2_broadcaster\n'}
+[4.193948] (learning_tf2_cpp) StdoutLine: {'line': b'[ 80%] Linking CXX executable dynamic_frame_tf2_broadcaster\n'}
+[4.219968] (-) TimerEvent: {}
+[4.276729] (learning_tf2_cpp) StdoutLine: {'line': b'[ 80%] Built target static_turtle_tf2_broadcaster\n'}
+[4.298891] (learning_tf2_cpp) StdoutLine: {'line': b'[ 80%] Built target dynamic_frame_tf2_broadcaster\n'}
+[4.320103] (-) TimerEvent: {}
+[4.420435] (-) TimerEvent: {}
+[4.520624] (-) TimerEvent: {}
+[4.620813] (-) TimerEvent: {}
+[4.720985] (-) TimerEvent: {}
+[4.781616] (learning_tf2_cpp) StdoutLine: {'line': b'[ 90%] Linking CXX executable turtle_tf2_listener\n'}
+[4.821074] (-) TimerEvent: {}
+[4.903227] (learning_tf2_cpp) StdoutLine: {'line': b'[ 90%] Built target turtle_tf2_listener\n'}
+[4.921159] (-) TimerEvent: {}
+[5.023232] (-) TimerEvent: {}
+[5.123368] (-) TimerEvent: {}
+[5.223577] (-) TimerEvent: {}
+[5.324651] (-) TimerEvent: {}
+[5.425369] (-) TimerEvent: {}
+[5.526210] (-) TimerEvent: {}
+[5.626381] (-) TimerEvent: {}
+[5.719985] (learning_tf2_cpp) StdoutLine: {'line': b'[100%] Linking CXX executable turtle_tf2_broadcaster\n'}
+[5.728788] (-) TimerEvent: {}
+[5.831561] (-) TimerEvent: {}
+[5.912840] (learning_tf2_cpp) StdoutLine: {'line': b'[100%] Built target turtle_tf2_broadcaster\n'}
+[5.923132] (learning_tf2_cpp) CommandEnded: {'returncode': 0}
+[5.925005] (learning_tf2_cpp) JobProgress: {'identifier': 'learning_tf2_cpp', 'progress': 'install'}
+[5.929154] (learning_tf2_cpp) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/learning_tf2_cpp'], 'cwd': '/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/learning_tf2_cpp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pes2ug23cs024'), ('AGENT', '1'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/pes2ug23cs024'), ('OLDPWD', '/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1510'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=598513865bd0a546aebf657669ce8836'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'pes2ug23cs024'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'pes2ug23cs024'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('OPENCODE', '1'), ('PATH', '/home/pes2ug23cs024/.opencode/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/pes2ug23cs024:@/tmp/.ICE-unix/1510,unix/pes2ug23cs024:/tmp/.ICE-unix/1510'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c1b4d5db_605d_4df5_a3b2_856cb6b9c11a'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('OPENCODE_PID', '26059'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.RMB7M3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.100'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/learning_tf2_cpp'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=598513865bd0a546aebf657669ce8836'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[5.931640] (-) TimerEvent: {}
+[5.932527] (learning_tf2_cpp) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.932848] (learning_tf2_cpp) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[5.933097] (learning_tf2_cpp) StdoutLine: {'line': b'-- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/lib/learning_tf2_cpp/static_turtle_tf2_broadcaster\n'}
+[5.936202] (learning_tf2_cpp) StdoutLine: {'line': b'-- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/lib/learning_tf2_cpp/turtle_tf2_broadcaster\n'}
+[5.940276] (learning_tf2_cpp) StdoutLine: {'line': b'-- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/launch/turtle_tf2_demo_launch.py\n'}
+[5.944105] (learning_tf2_cpp) StdoutLine: {'line': b'-- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/launch/turtle_tf2_demo_launch.xml\n'}
+[5.947657] (learning_tf2_cpp) StdoutLine: {'line': b'-- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/launch/turtle_tf2_dynamic_frame_demo_launch.py\n'}
+[5.950191] (learning_tf2_cpp) StdoutLine: {'line': b'-- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/launch/turtle_tf2_fixed_frame_demo_launch.py\n'}
+[5.952693] (learning_tf2_cpp) StdoutLine: {'line': b'-- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/lib/learning_tf2_cpp/turtle_tf2_listener\n'}
+[5.955318] (learning_tf2_cpp) StdoutLine: {'line': b'-- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/lib/learning_tf2_cpp/fixed_frame_tf2_broadcaster\n'}
+[5.957731] (learning_tf2_cpp) StdoutLine: {'line': b'-- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/lib/learning_tf2_cpp/dynamic_frame_tf2_broadcaster\n'}
+[5.960294] (learning_tf2_cpp) StdoutLine: {'line': b'-- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/ament_index/resource_index/package_run_dependencies/learning_tf2_cpp\n'}
+[5.963226] (learning_tf2_cpp) StdoutLine: {'line': b'-- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/ament_index/resource_index/parent_prefix_path/learning_tf2_cpp\n'}
+[5.965696] (learning_tf2_cpp) StdoutLine: {'line': b'-- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/environment/ament_prefix_path.sh\n'}
+[5.968138] (learning_tf2_cpp) StdoutLine: {'line': b'-- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/environment/ament_prefix_path.dsv\n'}
+[5.971273] (learning_tf2_cpp) StdoutLine: {'line': b'-- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/environment/path.sh\n'}
+[5.975423] (learning_tf2_cpp) StdoutLine: {'line': b'-- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/environment/path.dsv\n'}
+[5.978259] (learning_tf2_cpp) StdoutLine: {'line': b'-- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/local_setup.bash\n'}
+[5.983690] (learning_tf2_cpp) StdoutLine: {'line': b'-- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/local_setup.sh\n'}
+[5.986942] (learning_tf2_cpp) StdoutLine: {'line': b'-- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/local_setup.zsh\n'}
+[5.989439] (learning_tf2_cpp) StdoutLine: {'line': b'-- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/local_setup.dsv\n'}
+[5.991959] (learning_tf2_cpp) StdoutLine: {'line': b'-- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/package.dsv\n'}
+[5.994356] (learning_tf2_cpp) StdoutLine: {'line': b'-- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/ament_index/resource_index/packages/learning_tf2_cpp\n'}
+[5.996758] (learning_tf2_cpp) StdoutLine: {'line': b'-- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/cmake/learning_tf2_cppConfig.cmake\n'}
+[5.999172] (learning_tf2_cpp) StdoutLine: {'line': b'-- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/cmake/learning_tf2_cppConfig-version.cmake\n'}
+[6.001565] (learning_tf2_cpp) StdoutLine: {'line': b'-- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/package.xml\n'}
+[6.005794] (learning_tf2_cpp) CommandEnded: {'returncode': 0}
+[6.012217] (learning_tf2_cpp) JobEnded: {'identifier': 'learning_tf2_cpp', 'rc': 0}
+[6.012665] (-) EventReactorShutdown: {}

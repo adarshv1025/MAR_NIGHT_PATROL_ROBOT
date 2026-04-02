@@ -1,0 +1,32 @@
+[0.276s] Invoking command in '/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/patrol_control': PYTHONPATH=/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/patrol_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/patrol_control/build --no-deps symlink_data
+[0.379s] running develop
+[0.439s] running egg_info
+[0.439s] creating patrol_control.egg-info
+[0.440s] writing patrol_control.egg-info/PKG-INFO
+[0.440s] writing dependency_links to patrol_control.egg-info/dependency_links.txt
+[0.440s] writing entry points to patrol_control.egg-info/entry_points.txt
+[0.440s] writing requirements to patrol_control.egg-info/requires.txt
+[0.440s] writing top-level names to patrol_control.egg-info/top_level.txt
+[0.440s] writing manifest file 'patrol_control.egg-info/SOURCES.txt'
+[0.440s] reading manifest file 'patrol_control.egg-info/SOURCES.txt'
+[0.441s] writing manifest file 'patrol_control.egg-info/SOURCES.txt'
+[0.441s] running build_ext
+[0.441s] Creating /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/lib/python3.10/site-packages/patrol-control.egg-link (link to .)
+[0.445s] Installing control_node script to /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/lib/patrol_control
+[0.445s] Installing emergency_node script to /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/lib/patrol_control
+[0.445s] Installing patrol_controller script to /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/lib/patrol_control
+[0.445s] Installing teleop_node script to /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/lib/patrol_control
+[0.445s] 
+[0.445s] Installed /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/patrol_control
+[0.445s] running symlink_data
+[0.445s] creating /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/share/ament_index
+[0.445s] creating /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/share/ament_index/resource_index
+[0.445s] creating /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/share/ament_index/resource_index/packages
+[0.445s] symbolically linking /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/patrol_control/resource/patrol_control -> /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/share/ament_index/resource_index/packages
+[0.445s] symbolically linking /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/patrol_control/package.xml -> /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/share/patrol_control
+[0.446s] creating /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/share/patrol_control/launch
+[0.446s] symbolically linking /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/patrol_control/launch/patrol.launch.py -> /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/share/patrol_control/launch
+[0.446s] creating /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/share/patrol_control/config
+[0.446s] symbolically linking /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/patrol_control/config/patrol_params.yaml -> /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/share/patrol_control/config
+[0.446s] symbolically linking /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/patrol_control/config/example_configs.yaml -> /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/share/patrol_control/config
+[0.459s] Invoked command in '/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/patrol_control' returned '0': PYTHONPATH=/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/patrol_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/patrol_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/patrol_control/build --no-deps symlink_data

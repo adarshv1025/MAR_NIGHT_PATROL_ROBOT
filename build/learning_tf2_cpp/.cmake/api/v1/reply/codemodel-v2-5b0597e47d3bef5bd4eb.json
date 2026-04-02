@@ -1,0 +1,115 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-2d155a48c0d793c95dd9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "learning_tf2_cpp",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "dynamic_frame_tf2_broadcaster::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dynamic_frame_tf2_broadcaster-263bf9cac5fafdabad6b.json",
+					"name" : "dynamic_frame_tf2_broadcaster",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "fixed_frame_tf2_broadcaster::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-fixed_frame_tf2_broadcaster-69803ebce1fadf4a476d.json",
+					"name" : "fixed_frame_tf2_broadcaster",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "learning_tf2_cpp_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-learning_tf2_cpp_uninstall-36599dde4e8f2e367e95.json",
+					"name" : "learning_tf2_cpp_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "static_turtle_tf2_broadcaster::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-static_turtle_tf2_broadcaster-b45927c29d844891a32e.json",
+					"name" : "static_turtle_tf2_broadcaster",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "turtle_tf2_broadcaster::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-turtle_tf2_broadcaster-f2a136875ac381b4b563.json",
+					"name" : "turtle_tf2_broadcaster",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "turtle_tf2_listener::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-turtle_tf2_listener-f402a6ee54f0f2ca6c38.json",
+					"name" : "turtle_tf2_listener",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-8a3ccfbbb83a7ca8ac4a.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/learning_tf2_cpp",
+		"source" : "/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/src/learning_tf2_cpp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

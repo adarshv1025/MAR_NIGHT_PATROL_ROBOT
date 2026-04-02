@@ -1,0 +1,6 @@
+[console_scripts]
+control_node = patrol_control.control_node:main
+emergency_node = patrol_control.emergency_node:main
+patrol_controller = patrol_control.patrol_controller:main
+teleop_node = patrol_control.teleop_node:main
+

@@ -1,0 +1,33 @@
+# ========================================
+# Night Patrol Robot Configuration
+# ========================================
+# This file contains all configurable parameters for the patrol controller
+
+patrol_controller:
+  ros__parameters:
+    # Waypoint Configuration
+    # Format: [x1, y1, x2, y2, x3, y3, ...]
+    # Default: Square patrol pattern (5m x 5m)
+    waypoints: [0.0, 0.0, 5.0, 0.0, 5.0, 5.0, 0.0, 5.0]
+    
+    # Speed Parameters
+    # linear_speed: Maximum forward/backward velocity (m/s)
+    # angular_speed: Maximum rotational velocity (rad/s)
+    linear_speed: 0.3
+    angular_speed: 0.5
+    
+    # Navigation Parameters
+    # waypoint_tolerance: Distance threshold to consider waypoint reached (m)
+    # obstacle_threshold: Minimum distance to obstacle before avoidance (m)
+    waypoint_tolerance: 0.3
+    obstacle_threshold: 0.8
+    
+    # Random Deviation Feature (Realism)
+    # noise_enabled: Enable/disable random path deviation
+    # noise_magnitude: Maximum deviation amount (smaller = more stable)
+    noise_enabled: false
+    noise_magnitude: 0.05
+    
+    # Safety Parameters
+    # scan_timeout: Maximum time without scan data before warning (seconds)
+    scan_timeout: 2.0

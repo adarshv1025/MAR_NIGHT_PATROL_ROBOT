@@ -1,0 +1,95 @@
+[0.009s] Invoking command in '/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/learning_tf2_cpp': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/src/learning_tf2_cpp -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp
+[0.126s] -- The C compiler identification is GNU 11.4.0
+[0.167s] -- The CXX compiler identification is GNU 11.4.0
+[0.173s] -- Detecting C compiler ABI info
+[0.211s] -- Detecting C compiler ABI info - done
+[0.217s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.218s] -- Detecting C compile features
+[0.219s] -- Detecting C compile features - done
+[0.220s] -- Detecting CXX compiler ABI info
+[0.255s] -- Detecting CXX compiler ABI info - done
+[0.258s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.258s] -- Detecting CXX compile features
+[0.258s] -- Detecting CXX compile features - done
+[0.263s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.329s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.362s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.386s] -- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.416s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.420s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.426s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.434s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.444s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.477s] -- Found rclcpp: 16.0.18 (/opt/ros/humble/share/rclcpp/cmake)
+[0.503s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.506s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.553s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.567s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.588s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.595s] -- Looking for pthread.h
+[0.628s] -- Looking for pthread.h - found
+[0.628s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.663s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.663s] -- Found Threads: TRUE  
+[0.688s] -- Found tf2: 0.25.19 (/opt/ros/humble/share/tf2/cmake)
+[0.695s] -- Found tf2_ros: 0.25.19 (/opt/ros/humble/share/tf2_ros/cmake)
+[0.757s] -- Found turtlesim: 1.4.3 (/opt/ros/humble/share/turtlesim/cmake)
+[0.767s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.808s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.808s] -- Configured cppcheck include dirs: 
+[0.808s] -- Configured cppcheck exclude dirs and/or files: 
+[0.809s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.809s] -- Added test 'lint_cmake' to check CMake code style
+[0.809s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.810s] -- Added test 'uncrustify' to check C / C++ code style
+[0.810s] -- Configured uncrustify additional arguments: 
+[0.810s] -- Added test 'xmllint' to check XML markup files
+[0.811s] -- Configuring done
+[0.823s] -- Generating done
+[0.827s] -- Build files have been written to: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/learning_tf2_cpp
+[0.831s] Invoked command in '/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/learning_tf2_cpp' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/src/learning_tf2_cpp -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp
+[0.832s] Invoking command in '/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/learning_tf2_cpp': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/learning_tf2_cpp -- -j5 -l5
+[0.856s] [ 10%] Building CXX object CMakeFiles/fixed_frame_tf2_broadcaster.dir/src/fixed_frame_tf2_broadcaster.cpp.o
+[0.856s] [ 20%] Building CXX object CMakeFiles/turtle_tf2_broadcaster.dir/src/turtle_tf2_broadcaster.cpp.o
+[0.856s] [ 30%] Building CXX object CMakeFiles/static_turtle_tf2_broadcaster.dir/src/static_turtle_tf2_broadcaster.cpp.o
+[0.857s] [ 40%] Building CXX object CMakeFiles/turtle_tf2_listener.dir/src/turtle_tf2_listener.cpp.o
+[0.858s] [ 50%] Building CXX object CMakeFiles/dynamic_frame_tf2_broadcaster.dir/src/dynamic_frame_tf2_broadcaster.cpp.o
+[3.853s] [ 60%] Linking CXX executable fixed_frame_tf2_broadcaster
+[4.113s] [ 60%] Built target fixed_frame_tf2_broadcaster
+[4.179s] [ 70%] Linking CXX executable static_turtle_tf2_broadcaster
+[4.194s] [ 80%] Linking CXX executable dynamic_frame_tf2_broadcaster
+[4.277s] [ 80%] Built target static_turtle_tf2_broadcaster
+[4.299s] [ 80%] Built target dynamic_frame_tf2_broadcaster
+[4.781s] [ 90%] Linking CXX executable turtle_tf2_listener
+[4.903s] [ 90%] Built target turtle_tf2_listener
+[5.720s] [100%] Linking CXX executable turtle_tf2_broadcaster
+[5.913s] [100%] Built target turtle_tf2_broadcaster
+[5.923s] Invoked command in '/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/learning_tf2_cpp' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/learning_tf2_cpp -- -j5 -l5
+[5.929s] Invoking command in '/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/learning_tf2_cpp': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/learning_tf2_cpp
+[5.932s] -- Install configuration: ""
+[5.933s] -- Execute custom install script
+[5.933s] -- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/lib/learning_tf2_cpp/static_turtle_tf2_broadcaster
+[5.936s] -- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/lib/learning_tf2_cpp/turtle_tf2_broadcaster
+[5.940s] -- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/launch/turtle_tf2_demo_launch.py
+[5.944s] -- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/launch/turtle_tf2_demo_launch.xml
+[5.947s] -- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/launch/turtle_tf2_dynamic_frame_demo_launch.py
+[5.950s] -- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/launch/turtle_tf2_fixed_frame_demo_launch.py
+[5.952s] -- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/lib/learning_tf2_cpp/turtle_tf2_listener
+[5.955s] -- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/lib/learning_tf2_cpp/fixed_frame_tf2_broadcaster
+[5.958s] -- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/lib/learning_tf2_cpp/dynamic_frame_tf2_broadcaster
+[5.960s] -- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/ament_index/resource_index/package_run_dependencies/learning_tf2_cpp
+[5.963s] -- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/ament_index/resource_index/parent_prefix_path/learning_tf2_cpp
+[5.965s] -- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/environment/ament_prefix_path.sh
+[5.968s] -- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/environment/ament_prefix_path.dsv
+[5.971s] -- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/environment/path.sh
+[5.975s] -- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/environment/path.dsv
+[5.978s] -- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/local_setup.bash
+[5.984s] -- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/local_setup.sh
+[5.987s] -- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/local_setup.zsh
+[5.989s] -- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/local_setup.dsv
+[5.992s] -- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/package.dsv
+[5.994s] -- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/ament_index/resource_index/packages/learning_tf2_cpp
+[5.997s] -- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/cmake/learning_tf2_cppConfig.cmake
+[5.999s] -- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/cmake/learning_tf2_cppConfig-version.cmake
+[6.001s] -- Symlinking: /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/install/learning_tf2_cpp/share/learning_tf2_cpp/package.xml
+[6.006s] Invoked command in '/home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/learning_tf2_cpp' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/pes2ug23cs024/MAR_NIGHT_PATROL_ROBOT/build/learning_tf2_cpp
