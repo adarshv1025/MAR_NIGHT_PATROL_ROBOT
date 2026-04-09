@@ -1,0 +1,4 @@
+[console_scripts]
+fake_scan = patrol_robot.fake_scan:main
+intruder_detector = patrol_robot.intruder_detector:main
+

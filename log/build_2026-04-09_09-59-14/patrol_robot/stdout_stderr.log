@@ -1,0 +1,36 @@
+running egg_info
+creating ../../build/patrol_robot/patrol_robot.egg-info
+writing ../../build/patrol_robot/patrol_robot.egg-info/PKG-INFO
+writing dependency_links to ../../build/patrol_robot/patrol_robot.egg-info/dependency_links.txt
+writing entry points to ../../build/patrol_robot/patrol_robot.egg-info/entry_points.txt
+writing requirements to ../../build/patrol_robot/patrol_robot.egg-info/requires.txt
+writing top-level names to ../../build/patrol_robot/patrol_robot.egg-info/top_level.txt
+writing manifest file '../../build/patrol_robot/patrol_robot.egg-info/SOURCES.txt'
+reading manifest file '../../build/patrol_robot/patrol_robot.egg-info/SOURCES.txt'
+writing manifest file '../../build/patrol_robot/patrol_robot.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/pes2ug23cs023/patrol_robot_ws/build/patrol_robot/build
+creating /home/pes2ug23cs023/patrol_robot_ws/build/patrol_robot/build/lib
+creating /home/pes2ug23cs023/patrol_robot_ws/build/patrol_robot/build/lib/patrol_robot
+copying patrol_robot/intruder_detector.py -> /home/pes2ug23cs023/patrol_robot_ws/build/patrol_robot/build/lib/patrol_robot
+copying patrol_robot/setup.py -> /home/pes2ug23cs023/patrol_robot_ws/build/patrol_robot/build/lib/patrol_robot
+copying patrol_robot/fake_scan.py -> /home/pes2ug23cs023/patrol_robot_ws/build/patrol_robot/build/lib/patrol_robot
+copying patrol_robot/__init__.py -> /home/pes2ug23cs023/patrol_robot_ws/build/patrol_robot/build/lib/patrol_robot
+running install
+running install_lib
+creating /home/pes2ug23cs023/patrol_robot_ws/install/patrol_robot/lib/python3.10/site-packages/patrol_robot
+copying /home/pes2ug23cs023/patrol_robot_ws/build/patrol_robot/build/lib/patrol_robot/intruder_detector.py -> /home/pes2ug23cs023/patrol_robot_ws/install/patrol_robot/lib/python3.10/site-packages/patrol_robot
+copying /home/pes2ug23cs023/patrol_robot_ws/build/patrol_robot/build/lib/patrol_robot/setup.py -> /home/pes2ug23cs023/patrol_robot_ws/install/patrol_robot/lib/python3.10/site-packages/patrol_robot
+copying /home/pes2ug23cs023/patrol_robot_ws/build/patrol_robot/build/lib/patrol_robot/fake_scan.py -> /home/pes2ug23cs023/patrol_robot_ws/install/patrol_robot/lib/python3.10/site-packages/patrol_robot
+copying /home/pes2ug23cs023/patrol_robot_ws/build/patrol_robot/build/lib/patrol_robot/__init__.py -> /home/pes2ug23cs023/patrol_robot_ws/install/patrol_robot/lib/python3.10/site-packages/patrol_robot
+byte-compiling /home/pes2ug23cs023/patrol_robot_ws/install/patrol_robot/lib/python3.10/site-packages/patrol_robot/intruder_detector.py to intruder_detector.cpython-310.pyc
+byte-compiling /home/pes2ug23cs023/patrol_robot_ws/install/patrol_robot/lib/python3.10/site-packages/patrol_robot/setup.py to setup.cpython-310.pyc
+byte-compiling /home/pes2ug23cs023/patrol_robot_ws/install/patrol_robot/lib/python3.10/site-packages/patrol_robot/fake_scan.py to fake_scan.cpython-310.pyc
+byte-compiling /home/pes2ug23cs023/patrol_robot_ws/install/patrol_robot/lib/python3.10/site-packages/patrol_robot/__init__.py to __init__.cpython-310.pyc
+running install_egg_info
+Copying ../../build/patrol_robot/patrol_robot.egg-info to /home/pes2ug23cs023/patrol_robot_ws/install/patrol_robot/lib/python3.10/site-packages/patrol_robot-0.0.0-py3.10.egg-info
+running install_scripts
+Installing fake_scan script to /home/pes2ug23cs023/patrol_robot_ws/install/patrol_robot/lib/patrol_robot
+Installing intruder_detector script to /home/pes2ug23cs023/patrol_robot_ws/install/patrol_robot/lib/patrol_robot
+writing list of installed files to '/home/pes2ug23cs023/patrol_robot_ws/build/patrol_robot/install.log'
