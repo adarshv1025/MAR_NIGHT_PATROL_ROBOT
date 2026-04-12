@@ -1,0 +1,280 @@
+<sdf version="1.7">
+  <world name="night_world">
+    <gravity>0 0 -9.8</gravity>
+
+    <scene>
+      <ambient>0.02 0.02 0.03 1</ambient>
+      <background>0.01 0.01 0.03 1</background>
+      <shadows>true</shadows>
+    </scene>
+
+    <light type="directional" name="moon_light">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 20 0 0 0</pose>
+      <diffuse>0.18 0.2 0.25 1</diffuse>
+      <specular>0.06 0.06 0.08 1</specular>
+      <direction>-0.4 0.1 -1.0</direction>
+      <attenuation>
+        <range>200</range>
+        <constant>0.4</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+    </light>
+
+    <light type="point" name="lamp_north">
+      <pose>3.0 3.0 3.0 0 0 0</pose>
+      <diffuse>0.28 0.24 0.2 1</diffuse>
+      <specular>0.05 0.05 0.05 1</specular>
+      <attenuation>
+        <range>12</range>
+        <constant>0.6</constant>
+        <linear>0.08</linear>
+        <quadratic>0.01</quadratic>
+      </attenuation>
+    </light>
+
+    <light type="point" name="lamp_south">
+      <pose>-3.2 -2.5 2.8 0 0 0</pose>
+      <diffuse>0.2 0.22 0.28 1</diffuse>
+      <specular>0.05 0.05 0.05 1</specular>
+      <attenuation>
+        <range>10</range>
+        <constant>0.6</constant>
+        <linear>0.09</linear>
+        <quadratic>0.012</quadratic>
+      </attenuation>
+    </light>
+
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="ground_link">
+        <collision name="ground_collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>40 40</size>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="ground_visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>40 40</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.08 0.08 0.09 1</ambient>
+            <diffuse>0.12 0.12 0.14 1</diffuse>
+            <specular>0.01 0.01 0.01 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="perimeter_wall_north">
+      <static>true</static>
+      <pose>0 6 0.6 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>12 0.2 1.2</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>12 0.2 1.2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.08 0.08 0.1 1</ambient>
+            <diffuse>0.12 0.12 0.15 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="perimeter_wall_south">
+      <static>true</static>
+      <pose>0 -6 0.6 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>12 0.2 1.2</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>12 0.2 1.2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.08 0.08 0.1 1</ambient>
+            <diffuse>0.12 0.12 0.15 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="perimeter_wall_east">
+      <static>true</static>
+      <pose>6 0 0.6 0 0 1.5708</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>12 0.2 1.2</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>12 0.2 1.2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.08 0.08 0.1 1</ambient>
+            <diffuse>0.12 0.12 0.15 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="perimeter_wall_west">
+      <static>true</static>
+      <pose>-6 0 0.6 0 0 1.5708</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>12 0.2 1.2</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>12 0.2 1.2</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.08 0.08 0.1 1</ambient>
+            <diffuse>0.12 0.12 0.15 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="crate_1">
+      <static>true</static>
+      <pose>1.5 0.6 0.5 0 0 0.2</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>1.0 1.0 1.0</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1.0 1.0 1.0</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.15 0.12 0.1 1</ambient>
+            <diffuse>0.25 0.2 0.16 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="crate_2">
+      <static>true</static>
+      <pose>-1.8 2.2 0.35 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.8 0.8 0.7</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.8 0.8 0.7</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.12 0.12 0.12 1</ambient>
+            <diffuse>0.2 0.2 0.2 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="barrel_1">
+      <static>true</static>
+      <pose>2.5 -1.8 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <cylinder>
+              <radius>0.4</radius>
+              <length>1.0</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <cylinder>
+              <radius>0.4</radius>
+              <length>1.0</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.1 0.12 0.14 1</ambient>
+            <diffuse>0.16 0.18 0.2 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="intruder_dummy">
+      <static>true</static>
+      <pose>-2.5 -1.2 0.9 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.4 0.4 1.8</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.4 0.4 1.8</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.22 0.05 0.05 1</ambient>
+            <diffuse>0.35 0.1 0.1 1</diffuse>
+            <emissive>0.08 0 0 1</emissive>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>
