@@ -18,6 +18,12 @@ class PatrolNode(Node):
         self.declare_parameter('waypoint_tolerance', 0.35)
         self.declare_parameter('linear_speed', 0.50)
         self.declare_parameter('angular_speed', 1.2)
+        self.declare_parameter('turn_in_place_angle', 0.42)
+        self.declare_parameter('turn_exit_angle', 0.18)
+        self.declare_parameter('turning_angular_gain', 1.8)
+        self.declare_parameter('tracking_angular_gain', 1.2)
+        self.declare_parameter('min_turn_speed', 0.35)
+        self.declare_parameter('min_move_speed', 0.05)
         self.declare_parameter('random_deviation_max', 0.35)
         self.declare_parameter('control_hz', 10.0)
         self.declare_parameter('stuck_timeout_sec', 4.5)
@@ -31,6 +37,12 @@ class PatrolNode(Node):
         self.waypoint_tolerance = float(self.get_parameter('waypoint_tolerance').value)
         self.linear_speed = float(self.get_parameter('linear_speed').value)
         self.angular_speed = float(self.get_parameter('angular_speed').value)
+        self.turn_in_place_angle = float(self.get_parameter('turn_in_place_angle').value)
+        self.turn_exit_angle = float(self.get_parameter('turn_exit_angle').value)
+        self.turning_angular_gain = float(self.get_parameter('turning_angular_gain').value)
+        self.tracking_angular_gain = float(self.get_parameter('tracking_angular_gain').value)
+        self.min_turn_speed = float(self.get_parameter('min_turn_speed').value)
+        self.min_move_speed = float(self.get_parameter('min_move_speed').value)
         self.random_deviation_max = float(self.get_parameter('random_deviation_max').value)
         self.stuck_timeout_sec = float(self.get_parameter('stuck_timeout_sec').value)
         self.stuck_progress_epsilon = float(self.get_parameter('stuck_progress_epsilon').value)
@@ -43,6 +55,7 @@ class PatrolNode(Node):
         self.current_index = 0
         self.current_target = self._deviated_target(self.waypoints[self.current_index])
         self.last_status = ''
+        self.turning_in_place = False
         self.progress_ref_x = None
         self.progress_ref_y = None
         self.progress_ref_time = self.get_clock().now().nanoseconds / 1e9
@@ -100,6 +113,7 @@ class PatrolNode(Node):
         self.waypoints = new_points
         self.current_index = 0
         self.current_target = self._deviated_target(self.waypoints[self.current_index])
+        self.turning_in_place = False
         self.get_logger().info(f'Patrol path updated live. Waypoint count: {len(self.waypoints)}')
 
     def _normalize(self, angle: float) -> float:
@@ -157,6 +171,7 @@ class PatrolNode(Node):
         if distance < self.waypoint_tolerance:
             self.current_index = (self.current_index + 1) % len(self.waypoints)
             self.current_target = self._deviated_target(self.waypoints[self.current_index])
+            self.turning_in_place = False
             self._reset_progress_reference()
             target_x, target_y = self.current_target
             dx = target_x - self.pose_x
@@ -166,25 +181,37 @@ class PatrolNode(Node):
 
         target_yaw = math.atan2(dy, dx)
         yaw_error = self._normalize(target_yaw - self.yaw)
+        abs_yaw_error = abs(yaw_error)
 
         turn_limit = self.angular_speed * self.speed_scale
-        if abs(yaw_error) > 0.35:
+        if self.turning_in_place:
+            if abs_yaw_error <= self.turn_exit_angle:
+                self.turning_in_place = False
+        elif abs_yaw_error >= self.turn_in_place_angle:
+            self.turning_in_place = True
+
+        if self.turning_in_place:
             self._reset_progress_reference()
             cmd.linear.x = 0.0
-            cmd.angular.z = max(-turn_limit, min(turn_limit, 1.4 * yaw_error))
+            turn_cmd = self.turning_angular_gain * yaw_error
+            if abs(turn_cmd) < self.min_turn_speed and abs_yaw_error > 1e-3:
+                turn_cmd = math.copysign(self.min_turn_speed, yaw_error)
+            cmd.angular.z = max(-turn_limit, min(turn_limit, turn_cmd))
             state = 'PATROL_TURNING'
         else:
             if self._is_stuck():
                 self.current_index = (self.current_index + 1) % len(self.waypoints)
                 self.current_target = self._deviated_target(self.waypoints[self.current_index])
+                self.turning_in_place = False
                 self._reset_progress_reference()
                 self.cmd_pub.publish(Twist())
                 self._publish_status(f'PATROL_RECOVERY: stuck, skipping to waypoint={self.current_index}')
                 return
 
             base_speed = self.linear_speed * self.speed_scale
-            cmd.linear.x = max(0.08, base_speed * (1.0 - min(abs(yaw_error), 1.0)))
-            cmd.angular.z = max(-turn_limit, min(turn_limit, yaw_error))
+            heading_scale = 1.0 - min(1.0, abs_yaw_error / max(self.turn_in_place_angle, 1e-3))
+            cmd.linear.x = max(self.min_move_speed, base_speed * heading_scale)
+            cmd.angular.z = max(-turn_limit, min(turn_limit, self.tracking_angular_gain * yaw_error))
             state = 'PATROL_MOVING'
 
         self.cmd_pub.publish(cmd)

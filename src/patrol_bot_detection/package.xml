@@ -3,13 +3,14 @@
 <package format="3">
   <name>patrol_bot_detection</name>
   <version>0.0.0</version>
-  <description>Intruder detection package using LiDAR threshold logic.</description>
+  <description>Intruder detection package using Gazebo intruder model classification and LiDAR fallback.</description>
   <maintainer email="night.patrol@example.com">night_patrol_team</maintainer>
   <license>MIT</license>
 
   <buildtool_depend>ament_python</buildtool_depend>
 
   <depend>rclpy</depend>
+  <depend>gazebo_msgs</depend>
   <depend>sensor_msgs</depend>
   <depend>std_msgs</depend>
 

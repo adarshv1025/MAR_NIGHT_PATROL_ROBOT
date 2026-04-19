@@ -28,6 +28,7 @@ setup(
             'emergency = patrol_bot_control.emergency:main',
             'dashboard = patrol_bot_control.dashboard:main',
             'wasd_teleop = patrol_bot_control.wasd_teleop:main',
+            'control_gui = patrol_bot_control.control_gui:main',
         ],
     },
 )

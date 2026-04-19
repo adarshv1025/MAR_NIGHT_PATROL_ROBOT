@@ -173,7 +173,7 @@
       </link>
     </model>
 
-    <model name="crate_1">
+    <model name="obstacle_crate_1">
       <static>true</static>
       <pose>1.5 0.6 0.5 0 0 0.2</pose>
       <link name="link">
@@ -198,7 +198,7 @@
       </link>
     </model>
 
-    <model name="crate_2">
+    <model name="obstacle_crate_2">
       <static>true</static>
       <pose>-1.8 2.2 0.35 0 0 0</pose>
       <link name="link">
@@ -223,7 +223,7 @@
       </link>
     </model>
 
-    <model name="barrel_1">
+    <model name="obstacle_barrel_1">
       <static>true</static>
       <pose>2.5 -1.8 0.5 0 0 0</pose>
       <link name="link">
@@ -250,17 +250,10 @@
       </link>
     </model>
 
-    <model name="intruder_dummy">
+    <model name="intruder_target_1">
       <static>true</static>
       <pose>-2.5 -1.2 0.9 0 0 0</pose>
       <link name="link">
-        <collision name="collision">
-          <geometry>
-            <box>
-              <size>0.4 0.4 1.8</size>
-            </box>
-          </geometry>
-        </collision>
         <visual name="visual">
           <geometry>
             <box>

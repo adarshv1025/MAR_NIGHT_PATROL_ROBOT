@@ -7,9 +7,10 @@ This workspace now contains a full simulation pipeline for a night patrol robot 
 - LiDAR scan simulation and optional camera stream
 - Waypoint patrol with looped path and random deviation
 - Basic LiDAR obstacle avoidance
-- Fake intruder detection by distance threshold
+- Intruder-object detection using Gazebo model classification
 - Emergency stop + kill switch + recovery logic
 - Teleop keyboard support
+- Desktop GUI control center (WASD + emergency + runtime controls)
 - Optional terminal dashboard for live demo controls
 
 ## Workspace Layout
@@ -75,6 +76,22 @@ Launch Gazebo + RViz together (LiDAR, TF, odometry preloaded in RViz):
 ```bash
 ros2 launch patrol_bot_gazebo night_patrol_demo.launch.py gui:=true use_rviz:=true
 ```
+
+Launch with desktop control GUI (single app for WASD + emergency + features):
+
+```bash
+ros2 launch patrol_bot_gazebo night_patrol_demo.launch.py gui:=true use_rviz:=true use_control_gui:=true start_teleop:=false
+```
+
+The GUI includes:
+
+- Manual/AUTO mode buttons
+- Emergency stop and release
+- WASD drive buttons and keyboard bindings
+- Sensor on/off controls
+- Speed scale slider
+- Waypoint path preset buttons
+- Live status (control mode, intruder alert, estop, system status)
 
 ## Teleop (Keyboard)
 
@@ -148,6 +165,7 @@ ros2 topic pub /sensor_toggle std_msgs/msg/Bool "{data: true}" -1
 ## Key Topics
 
 - `/scan` (LaserScan)
+- `/gazebo/model_states` (ModelStates, intruder object tracking)
 - `/front_camera/image_raw` (Image, optional camera)
 - `/patrol_cmd_vel` (raw patrol command)
 - `/auto_cmd_vel` (after obstacle logic)
@@ -169,6 +187,10 @@ RViz profile intentionally excludes camera/image display.
 - Auto patrol now includes anti-stuck recovery: if forward progress stalls, the node skips to the next waypoint.
 - Obstacle avoidance now uses slowdown + reverse-turn recovery to reduce collisions and escape tight spots.
 - Obstacle avoidance keeps a larger stand-off distance and uses hysteresis to avoid rapid clear/avoid toggling.
+- Obstacle avoidance logic is active only in AUTO mode; MANUAL teleop bypasses avoid behavior.
+- World objects are separated by name: `obstacle_*` for navigation hazards and `intruder_*` for intruder detection.
 - Intruder detection now repeats high-visibility terminal alerts while the intruder condition remains active.
-- Intruder alerting now evaluates full 360 LiDAR and only triggers on intruder-like point clusters.
+- Intruder alerting now uses `/gazebo/model_states` and intruder model names (prefix `intruder_`) to avoid confusion with obstacles.
+- If `/gazebo/model_states` is unavailable, intruder detection automatically falls back to tighter LiDAR filtering.
+- Intruder alerting now uses multi-scan confirmation and clear-hold timing to reduce alert flicker.
 - Default intruder detection range is increased and remains active in MANUAL teleop mode as well.

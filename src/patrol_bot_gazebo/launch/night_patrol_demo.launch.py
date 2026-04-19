@@ -13,6 +13,7 @@ def generate_launch_description():
     enable_camera = LaunchConfiguration('enable_camera')
     use_dashboard = LaunchConfiguration('use_dashboard')
     start_teleop = LaunchConfiguration('start_teleop')
+    use_control_gui = LaunchConfiguration('use_control_gui')
     use_rviz = LaunchConfiguration('use_rviz')
     gui = LaunchConfiguration('gui')
 
@@ -139,11 +140,20 @@ def generate_launch_description():
         condition=IfCondition(use_dashboard),
     )
 
+    control_gui_node = Node(
+        package='patrol_bot_control',
+        executable='control_gui',
+        name='control_gui',
+        output='screen',
+        condition=IfCondition(use_control_gui),
+    )
+
     return LaunchDescription([
         DeclareLaunchArgument('use_sim_time', default_value='true'),
         DeclareLaunchArgument('enable_camera', default_value='true'),
         DeclareLaunchArgument('use_dashboard', default_value='false'),
         DeclareLaunchArgument('start_teleop', default_value='false'),
+        DeclareLaunchArgument('use_control_gui', default_value='false'),
         DeclareLaunchArgument('use_rviz', default_value='true'),
         DeclareLaunchArgument('gui', default_value='true'),
         gazebo_launch,
@@ -156,5 +166,6 @@ def generate_launch_description():
         detect_node,
         teleop_node,
         dashboard_node,
+        control_gui_node,
         rviz_node,
     ])

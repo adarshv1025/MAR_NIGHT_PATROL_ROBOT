@@ -4,7 +4,7 @@ import rclpy
 from geometry_msgs.msg import Twist
 from rclpy.node import Node
 from sensor_msgs.msg import LaserScan
-from std_msgs.msg import Bool
+from std_msgs.msg import Bool, String
 
 
 class AvoidNode(Node):
@@ -24,6 +24,7 @@ class AvoidNode(Node):
         self.declare_parameter('recovery_duration', 1.0)
         self.declare_parameter('obstacle_vote_in', 2)
         self.declare_parameter('obstacle_vote_out', 5)
+        self.declare_parameter('avoid_only_in_auto', True)
 
         self.obstacle_threshold = float(self.get_parameter('obstacle_threshold').value)
         self.obstacle_clearance = float(self.get_parameter('obstacle_clearance').value)
@@ -37,7 +38,9 @@ class AvoidNode(Node):
         self.recovery_duration = float(self.get_parameter('recovery_duration').value)
         self.obstacle_vote_in = int(self.get_parameter('obstacle_vote_in').value)
         self.obstacle_vote_out = int(self.get_parameter('obstacle_vote_out').value)
+        self.avoid_only_in_auto = bool(self.get_parameter('avoid_only_in_auto').value)
         self.sensors_enabled = True
+        self.control_mode = 'AUTO'
 
         self.latest_scan = None
         self.latest_patrol_cmd = Twist()
@@ -57,6 +60,7 @@ class AvoidNode(Node):
         self.create_subscription(Twist, '/patrol_cmd_vel', self.patrol_cmd_callback, 10)
         self.create_subscription(Bool, '/emergency_stop', self.estop_callback, 10)
         self.create_subscription(Bool, '/sensor_toggle', self.sensor_toggle_callback, 10)
+        self.create_subscription(String, '/control_mode', self.control_mode_callback, 10)
 
         self.create_timer(0.1, self.control_loop)
         self.get_logger().info('Obstacle avoidance node ready.')
@@ -74,6 +78,13 @@ class AvoidNode(Node):
         self.sensors_enabled = msg.data
         self.get_logger().info(f'Sensor toggle update received. enabled={self.sensors_enabled}')
 
+    def control_mode_callback(self, msg: String):
+        mode = msg.data.strip().upper()
+        if not mode or mode == self.control_mode:
+            return
+        self.control_mode = mode
+        self.get_logger().info(f'Avoid node control mode update: {self.control_mode}')
+
     def _valid(self, values):
         return [v for v in values if not (math.isinf(v) or math.isnan(v)) and v > 0.05]
 
@@ -85,6 +96,13 @@ class AvoidNode(Node):
             return
         self.last_mode = mode
         self.get_logger().info(message)
+
+    def _reset_avoid_state(self):
+        self.obstacle_active = False
+        self.blocked_since = None
+        self.recovery_until = 0.0
+        self.obstacle_votes = 0
+        self.clear_votes = 0
 
     def _pick_turn_direction(self, left_sector, right_sector) -> float:
         left_mean = sum(left_sector) / len(left_sector) if left_sector else 0.0
@@ -112,12 +130,15 @@ class AvoidNode(Node):
             self.obstacle_pub.publish(Bool(data=False))
             return
 
+        if self.avoid_only_in_auto and self.control_mode != 'AUTO':
+            self._reset_avoid_state()
+            self.pub.publish(self.latest_patrol_cmd)
+            self.obstacle_pub.publish(Bool(data=False))
+            self._set_mode('BYPASS', f'Avoidance bypassed in {self.control_mode} mode.')
+            return
+
         if not self.sensors_enabled or self.latest_scan is None:
-            self.obstacle_active = False
-            self.blocked_since = None
-            self.recovery_until = 0.0
-            self.obstacle_votes = 0
-            self.clear_votes = 0
+            self._reset_avoid_state()
             self.pub.publish(self.latest_patrol_cmd)
             self.obstacle_pub.publish(Bool(data=False))
             return
